@@ -18,7 +18,7 @@ mongoose.connect(process.env.CONNECTION_STRING.replace('<password>', process.env
 })
 
 app.get('/', (req, res, next) => {
-    res.send(new Date())
+    res.send('hello world')
 })
 app.get('/fake', async (req, res) => {
     const post = await Post.create({ title: 'post 1', content: 'content 1' })
